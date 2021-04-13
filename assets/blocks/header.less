@@ -1,0 +1,44 @@
+// main: ../css/style.less
+
+.header {
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.headerInner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerItem {
+    display: flex;
+    align-items: center;
+}
+
+.headerLogo {
+    a{
+        font-size: 24px;
+        font-weight: 700;
+        color: black;
+    }
+}
+
+.headerSearch {
+    position: relative;
+    input {
+        width: 473px;
+        height: 45px;
+        border: none;
+        padding: 0 40px;
+    }
+    
+    svg {
+        position: absolute;
+        left: 12px;
+        top: 12px;
+    }
+}
