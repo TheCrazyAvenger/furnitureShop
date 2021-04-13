@@ -9,31 +9,39 @@
     width: 100%;
 }
 
-.headerInner {
+.header__contant {
     display: flex;
     justify-content: space-between;
 }
 
-.headerItem {
+.header__item {
     display: flex;
     align-items: center;
 }
 
-.headerLogo {
+.header__logo {
     a{
         font-size: 24px;
         font-weight: 700;
         color: black;
     }
+    margin-right: 20px;
 }
 
-.headerSearch {
+.header__search {
     position: relative;
     input {
         width: 473px;
         height: 45px;
         border: none;
         padding: 0 40px;
+        transition: border .15s linear;
+
+        &:focus {
+            outline: none;
+            border: 1px #3a3a3a solid;
+            border-radius: 2px;
+        }
     }
     
     svg {
@@ -41,4 +49,13 @@
         left: 12px;
         top: 12px;
     }
+    
+}
+
+.header__profileImage {
+    border: 1px black solid;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+
 }

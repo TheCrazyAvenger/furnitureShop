@@ -1,30 +1,101 @@
 <html>
  <head>
      <title>FurnitreShop</title> 
-     <link rel="stylesheet" href="assets/css/style.css">      
+     <link rel="stylesheet" href="assets/css/style.css">  
+     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
  </head>
  <body>
    <header class="header">
        <div class="container">
-           <div class="headerInner">
-               <div class="headerItem">
-                   <div class="headerLogo"><a href="">Funiro.</a></div>
+           <div class="header__contant">
+               <div class="header__item">
+                   <div class="header__logo"><a href="">Funiro.</a></div>
                    <nav class="nav">
-                       <p class="navInner">Products</p>
-                       <p class="navInner">Rooms</p>
-                       <a href="" class="navInner">Inspirations</a>
+                       <div class="nav__inner nav__inner_slider">
+                           <p class="nav__inner">Products</p>
+                           <svg class="nav__inner nav__inner_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8333 1.50006L7.00001 7.3334L1.16668 1.50006" stroke="#3A3A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
+                        </div>
+                        <div class="nav__inner nav__inner_slider">
+                            <p class="nav__inner">Rooms</p>
+                            <svg class="nav__inner nav__inner_arrow" width="14" height="9" viewBox="0 0 14 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                             <path d="M12.8333 1.50006L7.00001 7.3334L1.16668 1.50006" stroke="#3A3A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                             </svg>
+                             
+                         </div>
+                       <a href="" class="nav__inner">Inspirations</a>
                    </nav>
-                   <div class="headerSearch">
+                   <div class="header__search nav__inner">
                        <input type="text" placeholder="Search for minimalist chair">
                        <svg class="headerSearchIcon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.6666 16.6667L12.5801 12.5802M12.5801 12.5802C13.5604 11.5999 14.1666 10.2458 14.1666 8.75C14.1666 5.75846 11.7415 3.33333 8.74998 3.33333C5.75844 3.33333 3.33331 5.75846 3.33331 8.75C3.33331 11.7415 5.75844 14.1667 8.74998 14.1667C10.2458 14.1667 11.5999 13.5604 12.5801 12.5802Z" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+                           <path d="M16.6666 16.6667L12.5801 12.5802M12.5801 12.5802C13.5604 11.5999 14.1666 10.2458 14.1666 8.75C14.1666 5.75846 11.7415 3.33333 8.74998 3.33333C5.75844 3.33333 3.33331 5.75846 3.33331 8.75C3.33331 11.7415 5.75844 14.1667 8.74998 14.1667C10.2458 14.1667 11.5999 13.5604 12.5801 12.5802Z" stroke="#333333" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                       </svg>
                    </div>
                </div>
-               <div class="headerItem">a</div>
+               <div class="header__item">
+                    <nav>
+                        <svg class="nav__inner" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9996 19.0541C-8 8 5.99999 -4 11.9996 3.58806C18 -4 32 8 11.9996 19.0541Z" stroke="#262F56" stroke-width="1.8"/>
+                        </svg>
+                        <svg class="nav__inner" width="23" height="14" viewBox="0 0 23 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1.50001H2.65424C3.13263 1.50001 3.37183 1.50001 3.56628 1.58675C3.73771 1.66322 3.88415 1.78639 3.98886 1.94217C4.10763 2.11889 4.14862 2.35455 4.23058 2.82586L4.6087 5.00001M4.6087 5.00001L5.49173 10.0774C5.67091 11.1077 5.7605 11.6229 6.02583 11.994C6.25945 12.3207 6.58606 12.5695 6.96311 12.7081C7.39133 12.8654 7.91176 12.815 8.95264 12.7143L18.614 11.7793C19.6298 11.681 20.1378 11.6318 20.5221 11.4033C20.8653 11.1993 21.1395 10.8972 21.3095 10.536C21.5 10.1314 21.5 9.6211 21.5 8.60051V8.60051C21.5 7.51583 21.5 6.97349 21.2922 6.55395C21.1068 6.17972 20.809 5.87291 20.4404 5.67655C20.0272 5.45641 19.4851 5.44036 18.4009 5.40827L4.6087 5.00001Z" stroke="#262F56" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <img src="" alt="" class="header__profileImage nav__inner">                      
+                    </nav>
+                </div>
            </div>
        </div>
-   </header>     
+   </header>    
+   <section class="intro">
+       <div class="container container_intro">
+            <div class="intro__content">
+                <h1 class="intro__title">High-Quality Furniture Just For You</h1>
+                <p class="intro__text">Our furniture is made from selected and best quality materials that are suitable for your dream home</p>
+                <button class="button">Shop Now</button>
+            </div>   
+           
+       </div>
+       <div class="slider">
+       <div class="intro__slider">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">Slide 4</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+    </div>
+</div>  
+       <div class="intro__bg"></div>
+   </section>
+   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+   
+   <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      spaceBetween: 10,
+      slidesPerGroup: 1,
+      width: 3000,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
  </body>
 </html>
