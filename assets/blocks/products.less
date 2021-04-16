@@ -3,14 +3,14 @@
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, 285px);
-    grid-gap: 16px;
+    grid-gap: 23px;
     justify-content: center;
         
 }
 
 .products__item {
     display: block;
-    height: 446px;
+    min-height: 430px;
     position: relative;
     &:hover {
         .products__hover {
@@ -24,7 +24,6 @@
 .products__hover { 
     opacity: 0;
     position: absolute;
-    height: 97%;
     top: 0;
     left:0;
     bottom:0;
@@ -73,8 +72,13 @@
 
 .products__content {
     padding: 16px;
+    line-height: 1;
     background-color: @lightBG;
-    line-height: 1.7;
+    h5,p {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+    }
 }
 
 .products__button {
