@@ -58,16 +58,16 @@
             </div>   
            
        </div>
-       <div class="slider">
-       <div class="intro__slider">
+       <div class="swiper">
+       <div class="intro__swiper">
         <div class="swiper-container">
-            <div class="swiper-wrapper">
+            <div class="swiper-wrapper swiper-wrapper_intro">
               <div class="swiper-slide">
                 <a href="">
                     <div class="swiper-slide__item">
-                        <h4 class="swiper-slide__title">Bohauss</h4>
+                        <h4 class="swiper-slide__title headingH4">Bohauss</h4>
                         <p class="swiper-slide__description mediumText">Luxury big sofa 2-seat</p>
-                        <p class="swiper-slide__price">Rp 17.000.000</p>      
+                        <p class="swiper-slide__price XtraLarger">Rp 17.000.000</p>      
                     </div>
                 </a>
               </div>
@@ -100,10 +100,10 @@
               </div>
             </div>
             <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="swiper-pagination swiper-pagination_intro"></div>
             <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next swiper-button-next_intro"></div>
+            <div class="swiper-button-prev swiper-button-prev_intro"></div>
           </div>
     </div>
 </div>  
@@ -300,7 +300,7 @@
                         <img src="assets/images/products/cafe chair.jpg" alt="">
                     </div>
                     <div class="products__content">
-                        <h5 class="products__title headingH5">Syltherine</h5>
+                        <h5 class="products__title headingH5">Syltherindadsdadsadasdasdse</h5>
                         <p class="products__description mediumText">Stylish cafe chair</p>
                         <p class="products__price XtraLarger">Rp 2.500.000</p>
                     </div>
@@ -400,25 +400,70 @@
         </div>
    </section>
 
+   <section class="section section_inspirations">
+       <div class="container">
+           <div class="inspirations">
+               <div class="inspirations__item">
+                   <h2 class="inspirations__title headingH2">50+ Beautiful rooms 
+                    inspiration</h2>
+                    <p class="inspirations__text mediumText">Our designer already made a lot of beautiful prototipe of rooms that inspire you</p>
+                    <button class="button button_inspirations"><p class="semiBold">Explore More</p></button>
+               </div>
+           </div>
+           
+       </div>
+       <div class="swiper swiper_inspirations">
+        <div class="intro__swiper">
+            <div class="swiper-container-inspirations">
+                <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next next_inspirations"></div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+       </div>
+   </section>
+
+   <section class="section">
+       <div class="container">
+            <div class="sectionHeader">
+                <h2 class="headingH2">Tips & Tricks</h2>
+            </div>
+            <div class="swiper swiper_tnt">
+                <div class="intro__swiper">
+                    <div class="swiper-container-tnt">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">Slide 1</div>
+                          <div class="swiper-slide">Slide 2</div>
+                          <div class="swiper-slide">Slide 3</div>
+                          <div class="swiper-slide">Slide 4</div>
+                          <div class="swiper-slide">Slide 5</div>
+                          <div class="swiper-slide">Slide 6</div>
+                          <div class="swiper-slide">Slide 7</div>
+                          <div class="swiper-slide">Slide 8</div>
+                          <div class="swiper-slide">Slide 9</div>
+                          <div class="swiper-slide">Slide 10</div>
+                          <div class="swiper-slide">Slide 10</div>
+                          <div class="swiper-slide">Slide 10</div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                      </div>
+                </div>
+            </div>
+       </div>
+   </section>
+
    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-   
-   <script>
-    var swiper = new Swiper('.swiper-container', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      slidesPerGroup: 1,
-      width: 934,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        bulletActiveClass: 'swiper-pagination-bullet-active',
-        bulletClass: 'swiper-pagination-bullet',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    });
-  </script>
+   <script src="js/script.js"></script>
  </body>
 </html>
