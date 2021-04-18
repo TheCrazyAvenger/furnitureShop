@@ -1,34 +1,34 @@
 // main: ../css/style.less
 
+// Беда с компонентами, зачем использовать position absolute на svg картинку
+
 .features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .features__item {
-    margin: 0 21px;
-    width: 260px;
-    margin-bottom: 21px;
-    line-height: 1;
-    color: @gray1;
-    position: relative;
+  margin: 0 35px;
+  margin-bottom: 21px;
+  line-height: 0.6;
+  color: @gray1;
+  position: relative;
 }
 
 .features__content {
-    margin-left: 86px;
+  margin-left: 86px;
 }
 
 .features__image {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 25px;
-    z-index: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+  z-index: 1;
 }
 
 .features__title {
-    font-size: 18px;
-    font-weight: 600;
+  font-size: 18px;
+  font-weight: 600;
 }

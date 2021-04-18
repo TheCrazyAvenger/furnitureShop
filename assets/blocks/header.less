@@ -1,55 +1,64 @@
 // main: ../css/style.less
+// На инпуте в header при нажатии появляеться нативнаяя от бразуера рамка
+// Также на всех кнопках такая проблема
+// В меню испольхуеться svg, а должна быть кнопка
+// При нажатии на svg картинку, не выбираеться ипут
+// Нету отзывичвости кусора на кнопку или другой элемент
 
 .header {
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
 .header__contant {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__item {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header__logo {
-    margin-right: 20px;
+  a {
+    font-size: 24px;
+    font-weight: 700;
+    color: @black;
+  }
+  margin-right: 20px;
 }
 
 .header__search {
-    position: relative;
-    input {
-        width: 473px;
-        height: 45px;
-        border: none;
-        padding: 0 40px;
-        transition: border .15s linear;
+  position: relative;
+  input {
+    width: 473px;
+    height: 45px;
+    border: none;
+    padding: 0 40px;
+    transition: border 0.15s linear;
 
-        &:focus {
-            outline: none;
-            border: 1px @gray1 solid;
-            border-radius: 2px;
-        }
+    &:focus {
+      outline: none;
+      border: 1px @gray1 solid;
+      border-radius: 2px;
     }
-    
-    svg {
-        position: absolute;
-        left: 12px;
-        top: 12px;
-    }
-    
+  }
+
+  svg {
+    position: absolute;
+    left: 12px;
+    top: 12px;
+  }
 }
 
 .header__profileImage {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-
+  border: 1px black solid;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
 }
