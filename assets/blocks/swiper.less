@@ -152,7 +152,40 @@
    
     .swiper-container-tnt {
       overflow: hidden;
+      .next_tnt, .prev_tnt {
+        width: 48px;
+        height: 48px;
+        background-color:white;
+        border-radius: 50px;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        top:43%;
+      }
+
+      .prev_tnt {
+        left:-25px;
+      }
+
+      .next_tnt {
+        right: -25px;
+      }
+
+      .next_tnt::after, .prev_tnt::after {
+        font-size: 15px;
+        color: @primary;  
+      }
+
       .swiper-slide {
         height: 370px;
+        transition: box-shadow .15s linear;
+        &:hover {
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        }
+      }
+
+      .swiper-pagination-bullet-active-tnt {
+        background-color: @primary;
+        opacity: 1;
       }
     }
+
+    

@@ -47,6 +47,7 @@ var swiper = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      bulletActiveClass: 'swiper-pagination-bullet-active-tnt'
     },
     navigation: {
       nextEl: '.swiper-button-next',
