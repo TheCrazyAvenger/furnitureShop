@@ -1,7 +1,8 @@
-var swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 20,
     slidesPerGroup: 1,
+    slideActiveClass: 'active_intro',
     width: 934,
     pagination: {
       el: '.swiper-pagination',
@@ -18,7 +19,7 @@ var swiper = new Swiper('.swiper-container', {
       },
   });
 
-  var swiper = new Swiper('.swiper-container-inspirations', {
+  const swiper1 = new Swiper('.swiper-container-inspirations', {
     slidesPerView: 2.1,
     spaceBetween: 24,
     slidesPerGroup: 1,
@@ -29,6 +30,8 @@ var swiper = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+      bulletClass: 'swiper-pagination-bullet',
+      bulletActiveClass: 'swiper-pagination-bullet-active',
     },
     navigation: {
       nextEl: '.swiper-button-next',
@@ -38,7 +41,7 @@ var swiper = new Swiper('.swiper-container', {
       },
   });
 
-  var swiper = new Swiper('.swiper-container-tnt', {
+  const swiper2 = new Swiper('.swiper-container-tnt', {
     slidesPerView: 3,
     spaceBetween: 32,
     slidesPerGroup: 3,
@@ -47,10 +50,15 @@ var swiper = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-      bulletActiveClass: 'swiper-pagination-bullet-active-tnt'
+      bulletClass: 'swiper-pagination-bullet',
+      bulletActiveClass: 'swiper-pagination-bullet-active',
+      
     },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 5000,
     },
   });
