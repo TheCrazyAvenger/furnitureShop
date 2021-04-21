@@ -18,7 +18,46 @@
             background-color: rgba(58, 58, 58, 0.72);
         }
     }
+    .discount30, .discount50, .new {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        z-index: 0;
+        display: none;
+    }
+    
+    .discount__oldprice {
+        position: absolute;
+        display:none;
+        right: 31px;
+        bottom: 17px;
+        text-decoration: line-through;
+    }
 
+}
+
+.products__item_discount50 {
+    .discount50 {
+        display:block;
+    }
+    .discount__oldprice{
+        display: block;
+    }
+}
+
+.products__item_discount30 {
+    .discount30 {
+        display:block;
+    }
+    .discount__oldprice{
+        display: block;
+    }
+}
+
+.products__item_new {
+    .new {
+        display:block;
+    }
 }
 
 .products__hover { 
@@ -28,6 +67,7 @@
     left:0;
     bottom:0;
     right:0;
+    z-index: 1;
     background-color: @gray1;
     padding: 0 42px;
     transition: opacity .15s linear;
