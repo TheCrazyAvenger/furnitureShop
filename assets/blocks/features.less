@@ -1,22 +1,36 @@
 // main: ../css/style.less
 
 .features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;   
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	.features__item {
+		margin: 0 18px;
+		width: 265px;
+		margin-bottom: 21px;
+		display: flex;
+		align-items: center;
+
+		.features__image {
+			margin: 0 26px;
+		}
+	}
 }
 
-.features__item {
-    margin: 0 21px;
-    width: 260px;
-    margin-bottom: 21px;
-    line-height: 1;
-    color: @gray1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+@media (max-width: 770px) {
+	.features {
+		.features__item {
+			width: 235px;
+			margin: 0 10px;
+		}
+	}
 }
 
-.features__image {
-    margin-right: 26px;
+@media (max-width: 575px) {
+	.features {
+		.features__item {
+			width: 265px;
+		}
+	}
 }

@@ -2,8 +2,30 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1,
     spaceBetween: 20,
     slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
     slideActiveClass: 'active_intro',
     width: 934,
+    breakpoints: {
+      1230: {
+        width: 934,
+      },
+      990: {
+        width: 950,
+      },
+      770: {
+        width: 730,
+      },
+      575: {
+        width: 535,
+      },
+      450: {
+        width: 410,
+      },
+      320: {
+        width: 280,
+      },
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -27,6 +49,17 @@ const swiper = new Swiper('.swiper-container', {
     slideActiveClass: 'active_inspirations',
     height: 40,
     loopFillGroupWithBlank: true,
+    breakpoints: {
+      1230: {
+        slidesPerView:2.1,
+      },
+      990: {
+        slidesPerView: 1.4,
+      },
+      320: {
+        slidesPerView: 1,
+    },
+  },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -47,6 +80,20 @@ const swiper = new Swiper('.swiper-container', {
     slidesPerGroup: 3,
     loop: true,
     loopFillGroupWithBlank: true,
+    breakpoints: {
+      1230: {
+        slidesPerView:3,
+        slidesPerGroup: 3,
+      },
+      770: {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+      },
+      320: {
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+      },
+    },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

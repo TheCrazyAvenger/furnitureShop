@@ -1,42 +1,59 @@
 // main: ../css/style.less
 
 .header {
-    padding: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    width: 100%;
+	padding: 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	width: 100%;
+
+	.header__content {
+		display: flex;
+		justify-content: space-between;
+
+		.header__item {
+			display: flex;
+			align-items: center;
+
+			.header__logo {
+				margin-right: 20px;
+			}
+
+			.header__search {
+				position: relative;
+
+				.header__search_icon {
+					position: absolute;
+					left: 12px;
+					top: 12px;
+					cursor: pointer;
+				}
+			}
+
+			.header__profileImage {
+				border-radius: 50%;
+				width: 40px;
+				height: 40px;
+			}
+		}
+	}
 }
 
-.header__contant {
-    display: flex;
-    justify-content: space-between;
+@media (max-width: 990px) {
+	.header {
+		padding: 35px 20px;
+
+		.header__item {
+			.header__search {
+				display: none;
+			}
+		}
+	}
 }
 
-.header__item {
-    display: flex;
-    align-items: center;
-}
-
-.header__logo {
-    margin-right: 20px;
-}
-
-.header__search {
-    position: relative;
-    
-    svg {
-        position: absolute;
-        left: 12px;
-        top: 12px;
-    }
-    
-}
-
-.header__profileImage {
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-
+@media (max-width: 450px) {
+	.header {
+		padding: 15px 20px;
+	}
 }

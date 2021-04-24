@@ -1,35 +1,61 @@
 // main: ../css/style.less
 
 .intro {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 785px;
-  background-color: #FCF8F3;
-  padding: 0;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	min-height: 785px;
+	background-color: #fcf8f3;
+	padding: 0;
+
+	.intro__content {
+		position: absolute;
+		width: 500px;
+		height: 550px;
+		left: 30px;
+		bottom: 80px;
+		z-index: 5;
+		background-color: rgba(255, 255, 255, 0.7);
+		padding: 20px 60px;
+
+		.intro__text {
+			color: @gray3;
+		}
+	}
+
+	.intro__bg {
+		position: absolute;
+		height: 100%;
+		width: 65%;
+		background-color: #f9f1e7;
+		top: 0;
+		left: 0;
+		z-index: 0;
+	}
 }
 
-.intro__bg {
-    position: absolute;
-    height: 100%;
-    width: 65%;
-    background-color: #F9F1E7;
-    top: 0;
-    left: 0;
-    z-index: 0;
+@media (max-width: 990px) {
+	.intro {
+		min-height: 640px;
+		height: 95vh;
+
+		.intro__content {
+			display: none;
+		}
+	}
 }
 
-.intro__content {
-    position: absolute;
-    width: 500px;
-    height: 550px;
-    left: 30px;
-    bottom: 80px;
-    z-index: 5;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px 60px;
+@media (max-width: 770px) {
+	.intro {
+		height: 90vh;
+		min-height: 500px;
+		max-height: 580px;
+	}
+}
 
-    .intro__text {
-      color: @gray3;
-    }
+@media (max-width: 450px) {
+	.intro {
+		min-height: 100px;
+		max-height: 463px;
+	}
 }

@@ -1,125 +1,126 @@
 // main: ../css/style.less
 
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 285px);
-    grid-gap: 23px;
-    justify-content: center;
-        
-}
+	display: grid;
+	grid-template-columns: repeat(auto-fit, 285px);
+	grid-gap: 23px;
+	justify-content: center;
 
-.products__item {
-    display: block;
-    min-height: 430px;
-    position: relative;
-    &:hover {
-        .products__hover {
-            opacity: 1;
-            background-color: rgba(58, 58, 58, 0.72);
-        }
-    }
-    .discount30, .discount50, .new {
-        position: absolute;
-        top: 24px;
-        right: 24px;
-        z-index: 0;
-        display: none;
-    }
-    
-    .discount__oldprice {
-        position: absolute;
-        display:none;
-        right: 31px;
-        bottom: 17px;
-        text-decoration: line-through;
-    }
+	.products__hover {
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+		background-color: @gray1;
+		padding: 0 42px;
+		transition: opacity 0.15s linear;
 
-}
+		.hover__container {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			line-height: 4;
 
-.products__item_discount50 {
-    .discount50 {
-        display:block;
-    }
-    .discount__oldprice{
-        display: block;
-    }
-}
+			.hover__content {
+				width: 95%;
+				display: flex;
+				justify-content: space-between;
 
-.products__item_discount30 {
-    .discount30 {
-        display:block;
-    }
-    .discount__oldprice{
-        display: block;
-    }
-}
+				.hover__item {
+					position: relative;
+					width: 45%;
+					color: @white;
 
-.products__item_new {
-    .new {
-        display:block;
-    }
-}
+					svg {
+						margin-right: 10px;
+						margin-left: auto;
+					}
+				}
+			}
+		}
+	}
 
-.products__hover { 
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left:0;
-    bottom:0;
-    right:0;
-    z-index: 1;
-    background-color: @gray1;
-    padding: 0 42px;
-    transition: opacity .15s linear;
-}
+	.products__item {
+		display: block;
+		min-height: 430px;
+		position: relative;
 
-.hover__container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    line-height: 4;
-}
+		&:hover {
+			.products__hover {
+				opacity: 1;
+				background-color: rgba(58, 58, 58, 0.72);
+			}
+		}
 
-.hover__content {
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    .hover__item {
-        position: relative;
-        width: 45%;
-        color: @white;
-        svg {
-           margin-right: 10px;
-           margin-left: auto;
-        }
-    }
-}
+		.products__image {
+			width: 100%;
+			height: 301px;
+			background-color: wheat;
+		}
 
-.products__image {
-    width: 100%;
-    height: 301px;
-    background-color: wheat;
-    img, svg {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
-}
+		.products__content {
+			padding: 16px;
+			line-height: 1.2;
+			background-color: @lightBG;
+		}
+	}
 
-.products__content {
-    padding: 16px;
-    line-height: 1.2;
-    background-color: @lightBG;
-    h5,p {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: normal;
-    }
+	.discount30,
+	.discount50,
+	.new {
+		position: absolute;
+		top: 24px;
+		right: 24px;
+		z-index: 0;
+		display: none;
+	}
+
+	.discount__oldprice {
+		position: absolute;
+		display: none;
+		right: 20px;
+		bottom: 17px;
+		text-decoration: line-through;
+	}
+
+	.products__item_discount50 {
+		.discount50 {
+			display: block;
+		}
+
+		.discount__oldprice {
+			display: block;
+		}
+	}
+
+	.products__item_discount30 {
+		.discount30 {
+			display: block;
+		}
+
+		.discount__oldprice {
+			display: block;
+		}
+	}
+
+	.products__item_new {
+		.new {
+			display: block;
+		}
+	}
 }
 
 .products__button {
-    margin-top: 16px;
-    text-align: center;
+	margin-top: 16px;
+	text-align: center;
+}
+
+@media (max-width: 652px) {
+	.products {
+		grid-template-columns: repeat(auto-fit, minmax(285px, 300px));
+	}
 }

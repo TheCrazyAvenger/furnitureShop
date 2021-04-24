@@ -1,45 +1,39 @@
-// main: ../css/style.less 
+// main: ../css/style.less
 
 .footer {
-    padding: 30px 0;
-}
+	padding: 30px 0;
 
-.footer__inner {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    .footer__item {
-        max-width: 249px;
-        margin-right: 80px;
-        margin-bottom: 40px;
-        &:last-child {
-            margin-right: 0px;
-        }
-    }
+	.footer__inner {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
 
-}
+		.footer__item {
+			max-width: 249px;
+			margin-bottom: 40px;
 
-.footer__content {
-    div {
-        margin: 0;
-    }
-    p {
-        margin: 16px 0;
-    }
-}
+			.footer__content {
+				p {
+					margin: 16px 0;
+				}
+			}
 
-.footer__adress {
-    position: relative;
-    svg, img {
-        position: absolute;
-        left: 0;
-    }
-    p{
-        padding-left: 28px;
-    }
-}
+			.footer__adress {
+				position: relative;
+				svg,
+				img {
+					position: absolute;
+					left: 0;
+				}
+				p {
+					padding-left: 28px;
+				}
+			}
 
-.footer__email {
-    margin: 16px 0;
-    display: flex;
+			.footer__email {
+				margin: 16px 0;
+				display: flex;
+			}
+		}
+	}
 }

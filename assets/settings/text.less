@@ -1,16 +1,15 @@
 // main: ../css/style.less
 
 .text {
-    margin: 10px 0;
-    color: @gray1;
-	transition: color .15s;
+	margin: 10px 0;
+	color: @gray1;
+	transition: color 0.15s;
 }
 
 .text_content {
 	font-size: 24px;
 	font-weight: 700;
 	color: @black;
-	
 }
 
 .text_large {
@@ -42,7 +41,6 @@
 .text_semimediumbold {
 	font-size: 18px;
 	font-weight: 600;
-
 }
 
 .text_small {
@@ -60,4 +58,38 @@
 	color: @gray3;
 	font-weight: 400;
 	font-size: 14px;
+}
+
+.text-overflow {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: normal;
+	}
+}
+
+.text-overflow_twostrings {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+		overflow-y: hidden;
+	}
+}
+
+@media (max-width: 450px) {
+	.text_large {
+		font-size: 35px;
+	}
 }

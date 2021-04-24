@@ -1,24 +1,30 @@
 // main: ../css/style.less
 
 .input {
-    border:0;
-    &:focus {
-        outline: none;
-    }
+	border: 0;
+	&:focus {
+		outline: none;
+	}
 }
 
 .input_header {
-    width: 473px;
-    height: 45px;
-    border: none;
-    padding: 0 40px;
+	width: 473px;
+	height: 45px;
+	border: none;
+	padding: 0 40px;
 }
 
 .input_footer {
-    width: 198px;
-    height: 45px;
-    margin-right: 4px;
-    background-color: @lightBG;
-    border: 0;
-    padding: 0 12px;
+	width: 198px;
+	height: 45px;
+	margin-right: 4px;
+	background-color: @lightBG;
+	border: 0;
+	padding: 0 12px;
+}
+
+@media (max-width: 1230px) {
+	.input_header {
+		width: 280px;
+	}
 }
