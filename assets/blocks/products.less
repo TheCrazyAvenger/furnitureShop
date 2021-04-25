@@ -35,7 +35,7 @@
 					width: 45%;
 					color: @white;
 
-					svg {
+					.hover__image {
 						margin-right: 10px;
 						margin-left: auto;
 					}
@@ -121,6 +121,25 @@
 
 @media (max-width: 652px) {
 	.products {
-		grid-template-columns: repeat(auto-fit, minmax(285px, 300px));
+		grid-template-columns: repeat(auto-fit, minmax(225px, 300px));
 	}
+}
+
+@media (max-width: 319px) {
+	.products {
+		.products__item {
+			min-height: 300px;
+
+			.products__image {
+				height: 250px;
+			}
+		}
+
+		.discount__oldprice {
+			max-width: 60px;
+			bottom: 9px;
+		}
+	}
+
+	
 }

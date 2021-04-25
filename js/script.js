@@ -25,6 +25,9 @@ const swiper = new Swiper('.swiper-container', {
       320: {
         width: 280,
       },
+      280: {
+        width: 240,
+      },
     },
     pagination: {
       el: '.swiper-pagination',
@@ -56,7 +59,7 @@ const swiper = new Swiper('.swiper-container', {
       990: {
         slidesPerView: 1.4,
       },
-      320: {
+      280: {
         slidesPerView: 1,
     },
   },
@@ -89,7 +92,7 @@ const swiper = new Swiper('.swiper-container', {
         slidesPerView: 2,
         slidesPerGroup: 2,
       },
-      320: {
+      280: {
         slidesPerView: 1,
         slidesPerGroup: 1,
       },

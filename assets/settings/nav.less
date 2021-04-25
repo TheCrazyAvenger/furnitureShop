@@ -4,12 +4,21 @@
 	display: inline-block;
 	vertical-align: middle;
 	margin-left: 29px;
-	color: @gray1;
-	transition: color 0.15s;
-	
+
+	.nav__inner_arrow {
+		transition: transform 0.15s;
+	}
 	&:hover,
 	.text:hover {
 		color: @primary;
+
+		.nav__inner_arrow {
+			transform: scale(1.15);
+		}
+		
+		.text {
+			color: @primary;
+		}
 	}
 }
 
@@ -27,7 +36,7 @@
 	display: block;
 }
 
-@media (max-width: 1230px) {
+@media (max-width: 1255px) {
 	.nav__intro {
 		.nav__inner {
 			margin-left: 14px;
@@ -42,8 +51,8 @@
 }
 
 @media (max-width: 450px) {
-	.nav__intro_second button:nth-child(1),
-	.nav__intro_second button:nth-child(2) {
+	.nav__intro_second .nav__inner:nth-child(1),
+	.nav__intro_second .nav__inner:nth-child(2) {
 		display: none;
 	}
 }
