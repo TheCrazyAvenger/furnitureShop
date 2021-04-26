@@ -12,6 +12,23 @@
 		/>
 	</head>
 	<body>
+		<div id="modalwindow" data-modal class="modal">
+			<div class="modal__window">
+				<div class="modal__item modal_header">
+					<p class="text text_semimediumbold">Registration</p>
+					<button class="images__button">
+						<img src="assets/images/modal/close.png" alt="" data-modal-close class="buttonclose__image">
+					</button>
+				</div>
+				<div class="modal__item modal_content">
+					<p class="text">Name</p>
+					<input class="input input_modal" placeholder="For example: Ilya" type="text">
+					<p class="text">Telephone</p>
+					<input class="input input_modal" placeholder="For example: +375291234567" type="text">
+					<button class="button modal__button">Register</button>
+				</div>
+			</div>
+		</div>
 		<header class="header">
 			<div class="container">
 				<div class="header__content">
@@ -143,7 +160,7 @@
 						Our furniture is made from selected and best quality materials that
 						are suitable for your dream home
 					</p>
-					<button class="button intro__button">Shop Now</button>
+					<button class="button intro__button" data-modal-button="modal">Shop Now</button>
 				</div>
 			</div>
 			<div class="swiper">
@@ -1821,6 +1838,7 @@
 		</footer>
 
 		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<script src="js/swiper.js"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>
