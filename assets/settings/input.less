@@ -13,6 +13,12 @@
 	background-color: @lightgray;
 	padding: 0 20px;
 	margin: 10px 0;
+	transition: border .15s, background-color .15s;
+}
+
+.input_modal:invalid, .input_modal_error {
+	border: 1px red solid;
+	background-color: #fdd;
 }
 
 .input_header {

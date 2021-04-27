@@ -20,13 +20,19 @@
 						<img src="assets/images/modal/close.png" alt="" data-modal-close class="buttonclose__image">
 					</button>
 				</div>
-				<div class="modal__item modal_content">
-					<p class="text">Name</p>
-					<input class="input input_modal" placeholder="For example: Ilya" type="text">
-					<p class="text">Telephone</p>
-					<input class="input input_modal" placeholder="For example: +375291234567" type="text">
-					<button class="button modal__button">Register</button>
-				</div>
+				<form class="modal__item modal_content" novalidate>
+					<label for="modal_name">
+						<p class="text">Name*</p>
+						<input type="text" id="modal_name" class="input input_modal" placeholder="For example: Ilya" type="text" pattern="^[a-zA-Z_]*$">
+					</label>
+		
+					<label for="modal_telephone">
+						<p class="text">Telephone*</p>
+						<input id="modal_telephone" class="input input_modal" placeholder="For example: +375291234567" type="text" pattern="^(\s*)?(\+375)([- _():=+]?\d[- _():=+]?){9}(\s*)?$">
+					</label>
+					
+					<button class="button modal__button" data-modal-submit>Register</button>
+				</form>
 			</div>
 		</div>
 		<header class="header">
