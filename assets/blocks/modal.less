@@ -1,0 +1,46 @@
+// main: ../css/style.less
+
+.modal {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1500;
+	background-color: rgba(0, 0, 0, 0.5);
+
+	.modal__window {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 700px;
+		min-height: 100px;
+		transform: translate(-50%, -50%);
+		background-color: @lightgray;
+		.modal__item {
+			padding: 15px 40px;
+		}
+
+		.modal_header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			background-color: rgb(245, 245, 245);
+
+			.buttonclose__image {
+				width: 35px;
+				height: 35px;
+			}
+		}
+
+		.modal_content {
+			background-color: @white;
+			padding-bottom: 35px;
+		}
+	}
+}
+
+.modal_active {
+	display: block;
+}

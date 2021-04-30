@@ -1,0 +1,34 @@
+// main: ../css/style.less
+
+.tipsandtricks {
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: white;
+
+	.tipsandtricks__image {
+		width: 100%;
+		height: 251px;
+	}
+
+	.tipsandtricks__content {
+		padding: 16px;
+		text-align: left;
+	}
+}
+
+@media (max-width: 575px) {
+	.tipsandtricks {
+		.tipsandtricks__image {
+			height: 225px;
+		}
+	}
+}
+
+@media (max-width: 450px) {
+	.tipsandtricks {
+		.tipsandtricks__image {
+			height: 155px;
+		}
+	}
+}

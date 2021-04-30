@@ -1,33 +1,48 @@
 // main: ../css/style.less
 
 .features {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+
+	.features__item {
+		margin: 0 18px;
+		width: 265px;
+		margin-bottom: 21px;
+		display: flex;
+		align-items: center;
+
+		.features__image {
+			margin: 0 26px;
+		}
+	}
 }
 
-.features__item {
-    margin: 0 35px;
-    margin-bottom: 21px;
-    line-height: 0.6;
-    color: @gray1;
-    position: relative;
+@media (max-width: 770px) {
+	.features {
+		.features__item {
+			width: 235px;
+			margin: 0 10px;
+		}
+	}
 }
 
-.features__content {
-    margin-left: 86px;
+@media (max-width: 575px) {
+	.features {
+		.features__item {
+			width: 265px;
+		}
+	}
 }
 
-.features__image {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 25px;
-    z-index: 1;
-}
+@media (max-width: 280px) {
+	.features {
+		.features__item {
+			margin: 0;
 
-.features__title {
-    font-size: 18px;
-    font-weight: 600;
+			.features__image {
+				margin: 0 20px;
+			}
+		}
+	}
 }

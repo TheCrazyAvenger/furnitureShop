@@ -1,55 +1,61 @@
-var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    slidesPerGroup: 1,
-    width: 934,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      bulletActiveClass: 'swiper-pagination-bullet-active',
-      bulletClass: 'swiper-pagination-bullet',
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    autoplay: {
-        delay: 5000,
-      },
-  });
+const modalButton = document.querySelector('[data-modal-button]'),
+      modal = document.querySelector('[data-modal]'),
+      modalWindow = document.querySelector('.modal__window'),
+      closemodalButton = document.querySelector('[data-modal-close]'),
+      submitmodalButton = document.querySelector('[data-modal-submit]'),
+      form  = document.querySelector('.modal_content'),
+      modalName = document.getElementById('modal_name'),
+      modalTel = document.getElementById('modal_telephone');
 
-  var swiper = new Swiper('.swiper-container-inspirations', {
-    slidesPerView: 2.1,
-    spaceBetween: 24,
-    slidesPerGroup: 1,
-    loop: true,
-    slideActiveClass: 'active_inspirations',
-    height: 40,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-    },
-    autoplay: {
-        delay: 5000,
-      },
-  });
+modalButton.addEventListener('click', function(){
+    modal.classList.add('modal_active');
+    openAnimation();
+});
 
-  var swiper = new Swiper('.swiper-container-tnt', {
-    slidesPerView: 3,
-    spaceBetween: 32,
-    slidesPerGroup: 3,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
+closemodalButton.addEventListener('click', function(){
+    modal.classList.remove('modal_active');
+});
+
+modal.addEventListener('click', function(){
+    modal.classList.remove('modal_active');
+});
+
+modal.querySelector('.modal__window').addEventListener('click', function(event){
+    event.stopPropagation();
+});
+
+modalName.addEventListener("input", inputCheck, false);
+
+modalTel.addEventListener("input", inputCheck, false);
+form.addEventListener("submit", function (event) {
+  if (!modalName.validity.valid || modalName.value == "") {
+    modalName.classList.add('input_modal_error');
+    event.preventDefault();
+  }
+  if (!modalTel.validity.valid || modalTel.value == "") {
+    modalTel.classList.add('input_modal_error');
+    event.preventDefault();
+  }
+}, false);
+
+function inputCheck () {
+  if (this.validity.valid) {
+    this.classList.remove('input_modal_error');
+  }
+};
+
+function openAnimation () {
+  var animationOpen = modalWindow.animate([
+    {
+      transform: 'translate(-50%, -20%)',
+      top: '20%'
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    {transform: 'translate(-50%, -50%)',
+      top: '50%'
+  }
+  ], 200);
+  animationOpen.addEventListener('finish', function() {
+    modalWindow.style.transform = 'translate(-50%, -50%)';
+    modalWindow.style.top = '50%';
   });
+};

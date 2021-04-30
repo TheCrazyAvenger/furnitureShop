@@ -1,16 +1,49 @@
 // main: ../css/style.less
 
 .inspirations {
-    display: flex;
-    align-items:center;
-    height: 100%;
-    position: relative;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	position: relative;
+
+	.inspirations__item {
+		width: 35%;
+
+		.inspirations__text {
+			width: 75%;
+		}
+	}
 }
 
-.inspirations__item {
-    width: 35%;
+@media (max-width: 1230px) {
+	.inspirations {
+		.inspirations__item {
+			width: 45%;
+		}
+	}
+}
+@media (max-width: 990px) {
+	.inspirations {
+		.inspirations__item {
+			width: 52%;
+		}
+	}
 }
 
-.inspirations__text {
-    width: 75%;
+@media (max-width: 770px) {
+	.inspirations {
+		display: block;
+		height: auto;
+		margin-bottom: 50px;
+
+		.inspirations__item {
+			display: block;
+			width: 100%;
+			text-align: center;
+
+			.inspirations__text {
+				width: 100%;
+			}
+		}
+	}
 }

@@ -1,0 +1,108 @@
+// main: ../css/style.less
+
+.button {
+	font-family: 'Gilroy', sans-serif;
+	text-align: center;
+	border: none;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 500;
+	transition: box-shadow 0.15s, transform 0.15s;
+
+	&:hover {
+		box-shadow: -3px 3px 0px rgba(0, 0, 0, 0.5);
+		transform: translate3d(2px, -2px, 0);
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	&:active {
+		transform: translate3d(0px, 0px, 0);
+	}
+}
+
+.modal__button {
+	background-color: @primary;
+	color: @white;
+	width: 150px;
+	height: 45px;
+	margin-top: 15px;
+}
+
+.images__button {
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	&:focus {
+		outline: none;
+	}
+	&:active {
+		transform: translate3d(-1px, 1px, 0);
+	}
+}
+
+.imagesproducts__button {
+	color: @white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	font-weight: 500;
+}
+
+.intro__button {
+	width: 100%;
+	height: 78px;
+	background-color: @primary;
+	color: @white;
+	font-size: 20px;
+	margin-top: 30px;
+}
+
+.hoverproducts__button {
+	height: 48px;
+	background-color: @white;
+	color: @primary;
+	margin: 0;
+}
+
+.product__button {
+	width: 245px;
+	height: 48px;
+	color: @primary;
+	background-color: @white;
+	border: 1px @primary solid;
+	margin-top: 16px;
+}
+
+.inspirations__button {
+	width: 176px;
+	height: 48px;
+	background-color: @primary;
+	color: @white;
+	margin-top: 10px;
+}
+
+.inspirationsswiper__button {
+	width: 48px;
+	height: 48px;
+	background-color: @primary;
+	color: @white;
+	margin-top: 82px;
+}
+
+.footer__button {
+	width: 46px;
+	height: 45px;
+	background-color: @primary;
+	margin-top: 0;
+}
+
+@media (max-width: 280px) {
+	.product__button {
+		width: 215px;
+	}
+}

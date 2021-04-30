@@ -1,0 +1,58 @@
+// main: ../css/style.less
+
+.nav__inner {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 29px;
+
+	.nav__inner_arrow {
+		transition: transform 0.15s;
+	}
+	&:hover,
+	.text:hover {
+		color: @primary;
+
+		.nav__inner_arrow {
+			transform: scale(1.15);
+		}
+		
+		.text {
+			color: @primary;
+		}
+	}
+}
+
+.nav__inner_slider {
+	margin: 0;
+	cursor: pointer;
+}
+
+.nav__inner_arrow {
+	margin-left: 10px;
+}
+
+.nav__inner_footer {
+	margin: 16px 0;
+	display: block;
+}
+
+@media (max-width: 1255px) {
+	.nav__intro {
+		.nav__inner {
+			margin-left: 14px;
+		}
+	}
+}
+
+@media (max-width: 770px) {
+	.nav__intro_first {
+		display: none;
+	}
+}
+
+@media (max-width: 450px) {
+	.nav__intro_second .nav__inner:nth-child(1),
+	.nav__intro_second .nav__inner:nth-child(2) {
+		display: none;
+	}
+}

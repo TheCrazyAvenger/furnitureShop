@@ -1,0 +1,50 @@
+// main: ../css/style.less
+
+.input {
+	border: 0;
+	&:focus {
+		outline: none;
+	}
+}
+
+.input_modal {
+	width: 100%;
+	height: 45px;
+	background-color: @lightgray;
+	padding: 0 20px;
+	margin: 10px 0;
+	transition: border .15s, background-color .15s;
+}
+
+.input_modal:invalid, .input_modal_error {
+	border: 1px red solid;
+	background-color: #fdd;
+}
+
+.input_header {
+	width: 473px;
+	height: 45px;
+	border: none;
+	padding: 0 40px;
+}
+
+.input_footer {
+	width: 198px;
+	height: 45px;
+	margin-right: 4px;
+	background-color: @lightgray;
+	border: 0;
+	padding: 0 12px;
+}
+
+@media (max-width: 1230px) {
+	.input_header {
+		width: 280px;
+	}
+}
+
+@media (max-width: 280px) {
+	.input_footer {
+		width: 150px;
+	}
+}
